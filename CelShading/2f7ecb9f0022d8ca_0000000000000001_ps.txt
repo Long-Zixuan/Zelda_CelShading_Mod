@@ -83,7 +83,7 @@ if (passParameterSem0.w == 4.0)
 	{
 		PS1i = int(uint(intBitsToFloat(PV0i.x))); // orignal code
 	}
-
+	/*Shit mount code writen by LoongLy*/
 	if(mode == LOONGLY_CEL_SHADING_MODE)
 	{
 		//PS1i = PV0i.x % 4 + 6;
@@ -150,6 +150,7 @@ if (passParameterSem0.w == 4.0)
 		// 4
 		R0i.x = floatBitsToInt(intBitsToFloat(PS1i) * intBitsToFloat(0x3b808081));
 	}
+	/*End shit mount code*/
 }
 else
 {
