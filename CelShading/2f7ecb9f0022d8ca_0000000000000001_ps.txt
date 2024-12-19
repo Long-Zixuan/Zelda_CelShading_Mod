@@ -18,6 +18,8 @@
 
 #endif
 #define LOONGLY_CEL_SHADING_MODE 13
+#define LOONGLY_CEL_SHADING2_MODE 14
+#define LOONGLY_CEL_SHADING3_MODE 16
 /* This shaders was auto-converted from OpenGL to Cemu.
 Conversion output:
 */
@@ -82,10 +84,51 @@ if (passParameterSem0.w == 4.0)
 		PS1i = int(uint(intBitsToFloat(PV0i.x))); // orignal code
 	}
 
-
 	if(mode == LOONGLY_CEL_SHADING_MODE)
 	{
 		//PS1i = PV0i.x % 4 + 6;
+		// 2
+		PV0i.z = R127i.y & PS1i;
+
+		// 3
+		PS1i = floatBitsToInt(float(uint(PV0i.z)));
+
+		// 4
+		R0i.x = floatBitsToInt(intBitsToFloat(PS1i) * intBitsToFloat(0x3b808081));
+
+	}
+	else if(mode == LOONGLY_CEL_SHADING2_MODE)
+	{
+		if( int(uint(intBitsToFloat(PV0i.x))) % 5 == 3)//林克的脸
+		{
+			PS1i = int(uint(intBitsToFloat(PV0i.x)));
+		}
+		else
+		{
+			PS1i = 8;
+		}
+		
+		// 2
+		PV0i.z = R127i.y & PS1i;
+
+		// 3
+		PS1i = floatBitsToInt(float(uint(PV0i.z)));
+
+		// 4
+		R0i.x = floatBitsToInt(intBitsToFloat(PS1i) * intBitsToFloat(0x3b808081));
+
+	}
+	else if(mode == LOONGLY_CEL_SHADING3_MODE)
+	{
+		if( int(uint(intBitsToFloat(PV0i.x))) % 5 == 3)//林克的脸
+		{
+			PS1i = int(uint(intBitsToFloat(PV0i.x)));
+		}
+		else
+		{
+			PS1i = 10;
+		}
+		
 		// 2
 		PV0i.z = R127i.y & PS1i;
 

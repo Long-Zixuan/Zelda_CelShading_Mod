@@ -43,9 +43,40 @@ $mode:int = 10
 $shdwFix:int = 2 # To hide Shadow Dropdowns
 
 [Preset]
-name =  ªÊª≠‰÷»æ ( ¿ΩÁ) Loongly
+name =  ªÊª≠‰÷»æ ( ¿ΩÁ) LoongLy
 category = ‘§…Ë
 $mode:int = 13
+$clarity = 0.05
+$menuWrkrnd:int = 0
+$shdwFix:int = 2
+$bright = 0.45
+$smode = 1
+$shadowsbrightness = 1
+$sred = 1
+$sgreen = 1
+$sblue = 1
+
+
+[Preset]
+name =  ªÊª≠‰÷»æ2 ( ¿ΩÁ) LoongLy
+category = ‘§…Ë
+default = 1
+$mode:int = 14
+$clarity = 0.05
+$menuWrkrnd:int = 0
+$shdwFix:int = 2
+$bright = 0.45
+$smode = 1
+$shadowsbrightness = 1
+$sred = 1
+$sgreen = 1
+$sblue = 1
+
+[Preset]
+name =  ªÊª≠‰÷»æ3 ( ¿ΩÁ) LoongLy
+category = ‘§…Ë
+default = 1
+$mode:int = 16
 $clarity = 0.05
 $menuWrkrnd:int = 0
 $shdwFix:int = 2
